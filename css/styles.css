@@ -1,0 +1,437 @@
+/* ============================================
+   CSS VARIABLES - Brand Colors & Design System
+   ============================================ */
+:root {
+    /* Primary color palette */
+    --color-primary: #2d6a4f;
+    --color-primary-light: #40916c;
+    --color-primary-dark: #1b4332;
+    --color-primary-ultra-light: #d8f3dc;
+
+    /* Secondary color palette */
+    --color-secondary: #52b788;
+    --color-secondary-light: #74c69d;
+    --color-secondary-dark: #2d6a4f;
+
+    /* Accent colors */
+    --color-accent: #95d5b2;
+    --color-accent-warm: #f4a261;
+    --color-accent-alert: #e76f51;
+
+    /* Neutral colors */
+    --color-background: #ffffff;
+    --color-background-alt: #f8f9fa;
+    --color-background-dark: #1b4332;
+    --color-text: #212529;
+    --color-text-light: #495057;
+    --color-text-lighter: #6c757d;
+    --color-text-white: #ffffff;
+
+    /* Border and divider colors */
+    --color-border: #dee2e6;
+    --color-border-light: #e9ecef;
+
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Poppins', 'Inter', sans-serif;
+
+    /* Font sizes - Responsive scale */
+    --font-size-base: 1rem;
+    --font-size-sm: 0.875rem;
+    --font-size-xs: 0.75rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.5rem;
+    --font-size-5xl: 3rem;
+
+    /* Font weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Spacing scale */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    --spacing-4xl: 6rem;
+
+    /* Border radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+    /* Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 300ms ease-in-out;
+    --transition-slow: 500ms ease-in-out;
+
+    /* Layout */
+    --container-max-width: 1200px;
+    --container-padding: var(--spacing-lg);
+    --nav-height: 70px;
+}
+
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+
+/* Modern CSS reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+h1 {
+    font-size: var(--font-size-4xl);
+}
+
+h2 {
+    font-size: var(--font-size-3xl);
+}
+
+h3 {
+    font-size: var(--font-size-2xl);
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+}
+
+h5 {
+    font-size: var(--font-size-lg);
+}
+
+h6 {
+    font-size: var(--font-size-base);
+}
+
+/* Paragraphs and text */
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-light);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-light);
+}
+
+a:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Lists */
+ul, ol {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.main-nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background);
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+    height: var(--nav-height);
+}
+
+.nav-container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-dark);
+}
+
+.logo-icon {
+    font-size: var(--font-size-3xl);
+    color: var(--color-secondary);
+}
+
+.logo-text {
+    color: var(--color-primary-dark);
+}
+
+/* Hide checkbox for burger menu */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: var(--spacing-sm);
+}
+
+.nav-toggle-label span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-primary-dark);
+    transition: all var(--transition-base);
+    border-radius: var(--radius-sm);
+}
+
+/* Navigation menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-sm);
+    align-items: center;
+    margin: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: var(--spacing-md) var(--spacing-lg);
+    color: var(--color-text);
+    font-weight: var(--font-weight-semibold);
+    transition: all var(--transition-fast);
+    border-radius: var(--radius-md);
+}
+
+.nav-link:hover {
+    background-color: var(--color-primary-ultra-light);
+    color: var(--color-primary-dark);
+}
+
+/* Active menu item styling */
+.nav-item.active .nav-link {
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+}
+
+.nav-item.active .nav-link:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Submenu styling */
+.submenu {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: var(--color-background);
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-md);
+    min-width: 250px;
+    list-style: none;
+    padding: var(--spacing-sm);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-base);
+    margin: 0;
+}
+
+.nav-item:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu a {
+    display: block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    color: var(--color-text);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.submenu a:hover {
+    background-color: var(--color-primary-ultra-light);
+    color: var(--color-primary-dark);
+    padding-left: var(--spacing-lg);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablet breakpoint (768px and below) */
+@media (max-width: 768px) {
+    :root {
+        --font-size-4xl: 2rem;
+        --font-size-5xl: 2.5rem;
+        --spacing-4xl: 3rem;
+    }
+
+    /* Show burger menu */
+    .nav-toggle-label {
+        display: flex;
+    }
+
+    /* Hide navigation menu by default on mobile */
+    .nav-menu {
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background-color: var(--color-background);
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--spacing-xs);
+        padding: var(--spacing-lg);
+        box-shadow: var(--shadow-xl);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all var(--transition-base);
+    }
+
+    /* Show menu when checkbox is checked */
+    .nav-toggle:checked ~ .nav-menu {
+        max-height: calc(100vh - var(--nav-height));
+        overflow-y: auto;
+        opacity: 1;
+    }
+
+    /* Animate burger icon */
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+        transform: rotate(45deg) translate(5.5px, 5.5px);
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+        transform: rotate(-45deg) translate(5.5px, -5.5px);
+    }
+
+    /* Mobile menu items */
+    .nav-item {
+        border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: var(--spacing-md) var(--spacing-lg);
+        border-radius: var(--radius-sm);
+    }
+
+    /* Active state for mobile */
+    .nav-item.active .nav-link {
+        background-color: var(--color-primary);
+        color: var(--color-text-white);
+    }
+
+    /* Submenu on mobile */
+    .submenu {
+        position: static;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        margin-left: var(--spacing-lg);
+        margin-top: var(--spacing-sm);
+        background-color: var(--color-background-alt);
+        border-left: 3px solid var(--color-secondary);
+    }
+
+    .submenu a {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-sm);
+    }
+
+    .submenu a:hover {
+        background-color: var(--color-primary-ultra-light);
+        color: var(--color-primary-dark);
+    }
+}
+
+/* Mobile breakpoint (480px and below) */
+@media (max-width: 480px) {
+    :root {
+        --font-size-3xl: 1.5rem;
+        --font-size-4xl: 1.75rem;
+        --font-size-5xl: 2rem;
+        --container-padding: var(--spacing-md);
+    }
+}
+
+/* Large desktop (1400px and above) */
+@media (min-width: 1400px) {
+    :root {
+        --container-max-width: 1400px;
+    }
+}
