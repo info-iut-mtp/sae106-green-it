@@ -718,13 +718,17 @@ img {
 /* Table styling */
 .comparison-table {
     margin-top: var(--spacing-2xl);
-    overflow-x: auto;
 }
 
 .comparison-table h3 {
     text-align: center;
     color: var(--color-primary-dark);
     margin-bottom: var(--spacing-lg);
+}
+
+.comparison-table table {
+    overflow-x: auto;
+    display: block;
 }
 
 table {
@@ -1132,7 +1136,7 @@ legend {
 
     /* Show menu when checkbox is checked */
     .nav-toggle:checked ~ .nav-menu {
-        max-height: calc(100vh - var(--nav-height));
+        max-height: calc(100dvh - var(--nav-height));
         overflow-y: auto;
         opacity: 1;
     }
