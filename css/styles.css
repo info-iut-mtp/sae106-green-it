@@ -609,6 +609,124 @@ img {
 }
 
 /* ============================================
+   HIGHLIGHT BOXES
+   ============================================ */
+
+.highlight-box {
+    background-color: var(--color-primary-ultra-light);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-primary);
+    margin-top: var(--spacing-lg);
+}
+
+.highlight-box h4 {
+    color: var(--color-primary-dark);
+    margin-top: 0;
+}
+
+.highlight-box ul {
+    margin-bottom: 0;
+    padding-left: var(--spacing-xl);
+}
+
+.highlight-box li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+}
+
+/* ============================================
+   CARBON FOOTPRINT SECTION
+   ============================================ */
+
+.carbon-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+}
+
+.carbon-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carbon-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr 300px;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.carbon-box {
+    background-color: var(--color-background);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.carbon-box h4 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}   
+
+.carbon-value {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-text-white);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.carbon-new .carbon-value {
+    background: linear-gradient(135deg, #e76f51 0%, #f4a261 100%);
+}
+
+.carbon-breakdown {
+    list-style: none;
+    padding-left: 0;
+}
+
+.carbon-breakdown li {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    background-color: var(--color-background-alt);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-sm);
+}
+
+.carbon-savings {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-text-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.savings-icon {
+    font-size: var(--font-size-5xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-sm);
+}
+
+.savings-value {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    display: block;
+    margin-bottom: var(--spacing-sm);
+}
+
+.savings-label {
+    font-size: var(--font-size-lg);
+    margin-bottom: 0;
+    color: var(--color-text-white);
+}
+
+/* ============================================
    CONTACT FORM
    ============================================ */
 
