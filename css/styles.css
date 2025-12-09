@@ -195,6 +195,10 @@ img {
     padding: var(--spacing-4xl) 0;
 }
 
+.section-alt {
+    background-color: var(--color-background-alt);
+}
+
 /* ============================================
    NAVIGATION
    ============================================ */
@@ -455,6 +459,54 @@ img {
     height: 4px;
     background: linear-gradient(90deg, var(--color-secondary) 0%, var(--color-primary) 100%);
     border-radius: var(--radius-full);
+}
+
+/* ============================================
+   DEFINITION SECTION
+   ============================================ */
+
+.definition-simple {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.definition-simple p {
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xl);
+}
+
+.definition-simple p:last-child {
+    margin-bottom: 0;
+}
+
+.definition-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-2xl) 0;
+}
+
+.definition-list li {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--color-text-light);
+    padding-left: var(--spacing-2xl);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.definition-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
+}
+
+.definition-list li:last-child {
+    margin-bottom: 0;
 }
 
 /* ============================================
