@@ -444,6 +444,29 @@ img {
 }
 
 /* ============================================
+   PAGE HEADER
+   ============================================ */
+
+.page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-text-white);
+    padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+    text-align: center;
+}
+
+.page-title {
+    color: var(--color-text-white);
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.page-subtitle {
+    color: var(--color-accent);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-light);
+}
+
+/* ============================================
    SECTION TITLES
    ============================================ */
 
