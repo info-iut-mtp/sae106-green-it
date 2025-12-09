@@ -726,9 +726,8 @@ img {
     margin-bottom: var(--spacing-lg);
 }
 
-.comparison-table table {
+.table-wrapper {
     overflow-x: auto;
-    display: block;
 }
 
 table {
