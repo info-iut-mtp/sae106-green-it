@@ -1080,6 +1080,10 @@ legend {
         gap: var(--spacing-xl);
     }
 
+    .carbon-comparison {
+        grid-template-columns: 1fr;
+    }
+
     .form-row {
         grid-template-columns: 1fr;
     }
@@ -1106,13 +1110,6 @@ legend {
         --font-size-5xl: 2rem;
         --container-padding: var(--spacing-md);
     }
-}
-
-/* Large desktop (1400px and above) */
-@media (min-width: 1400px) {
-    :root {
-        --container-max-width: 1400px;
-    }
 
     .contact-form {
         padding: var(--spacing-lg);
@@ -1120,5 +1117,16 @@ legend {
 
     .form-fieldset {
         padding: var(--spacing-md);
+    }
+
+    .carbon-value {
+        font-size: var(--font-size-2xl);
+    }
+}
+
+/* Large desktop (1400px and above) */
+@media (min-width: 1400px) {
+    :root {
+        --container-max-width: 1400px;
     }
 }
