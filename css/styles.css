@@ -862,6 +862,106 @@ td:last-child {
 }
 
 /* ============================================
+   ECONOMIC SECTION
+   ============================================ */
+
+/* Price comparison */
+.price-comparison {
+    margin-top: var(--spacing-xl);
+}
+
+.price-comparison h4 {
+    text-align: center;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-lg);
+}
+
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.price-item {
+    background-color: var(--color-background);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.price-item h5 {
+    color: var(--color-primary-dark);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.price-new {
+    padding: var(--spacing-sm);
+    background-color: var(--color-background-alt);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-lighter);
+    text-decoration: line-through;
+}
+
+.price-refurb {
+    padding: var(--spacing-md);
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.price-saving {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-secondary-light);
+    color: var(--color-text-white);
+    border-radius: var(--radius-full);
+    font-weight: var(--font-weight-semibold);
+    display: inline-block;
+}
+
+/* Social impact grid */
+.social-impact {
+    margin-top: var(--spacing-xl);
+}
+
+.social-impact h4 {
+    text-align: center;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-lg);
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.impact-box {
+    background-color: var(--color-background);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-secondary);
+}
+
+.impact-box h5 {
+    color: var(--color-primary);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-sm);
+}
+
+.impact-box p {
+    font-size: var(--font-size-sm);
+    margin-bottom: 0;
+}
+
+/* ============================================
    CONTACT FORM
    ============================================ */
 
@@ -1034,6 +1134,44 @@ legend {
     background-color: var(--color-border-light);
 }
 
+/* FAQ Section */
+.faq-section {
+    margin-top: var(--spacing-3xl);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-section h3 {
+    text-align: center;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-xl);
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.faq-item {
+    background-color: var(--color-background);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-secondary);
+}
+
+.faq-item h4 {
+    color: var(--color-primary);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.faq-item p {
+    margin-bottom: 0;
+}
+
 /* ============================================
    FOOTER
    ============================================ */
@@ -1042,7 +1180,7 @@ legend {
     background-color: var(--color-background-dark);
     color: var(--color-text-white);
     padding: var(--spacing-3xl) 0 var(--spacing-xl);
-    margin-top: var(--spacing-4xl);
+    /* margin-top: var(--spacing-4xl); */
 }
 
 .footer-content {
