@@ -175,14 +175,14 @@ img {
 
 /* Utility class - prevent inheriting global link styles */
 .no-link-style {
-    color: inherit;
-    text-decoration: none;
+    outline: inherit;
+    outline-offset: inherit;
 }
 
 .no-link-style:hover,
 .no-link-style:focus {
-    color: inherit;
-    text-decoration: none;
+    outline: inherit;
+    outline-offset: inherit;
 }
 
 /* ============================================
