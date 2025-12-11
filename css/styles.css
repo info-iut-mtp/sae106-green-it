@@ -488,6 +488,22 @@ img {
 
 .definition-list li:last-child { margin-bottom: 0; }
 
+.timeline-container {
+    display: flex;
+    align-items: center;
+}
+
+.timeline-arrow {
+    padding-left: var(--spacing-sm);
+    display: inline-block;
+    transition: var(--transition-fast);
+    font-size: var(--font-size-2xl);
+}
+
+.timeline-container:hover .timeline-arrow {
+    transform: translateX(var(--spacing-sm));
+}
+
 /* Controversy section */
 .controversy-content {
     display: grid;
