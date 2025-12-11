@@ -170,6 +170,22 @@ img {
 }
 
 /* ============================================
+   Miscellaneous
+   ============================================ */
+
+/* Utility class - prevent inheriting global link styles */
+.no-link-style {
+    color: inherit;
+    text-decoration: none;
+}
+
+.no-link-style:hover,
+.no-link-style:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ============================================
    LAYOUT UTILITIES
    ============================================ */
 
