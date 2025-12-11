@@ -229,6 +229,17 @@ img {
     color: var(--color-secondary);
 }
 
+/* Logo link styling - prevent inheriting global link styles */
+.logo-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo-link:hover,
+.logo-link:focus {
+    text-decoration: none;
+}
+
 /* Hide checkbox for burger menu */
 .nav-toggle { display: none; }
 
